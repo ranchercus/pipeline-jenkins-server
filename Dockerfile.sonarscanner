@@ -1,6 +1,7 @@
 FROM emeraldsquad/sonar-scanner:1.0.2
 
-RUN export https_proxy=http://192.168.137.2:8001 && apk -U --no-cache add git
-COPY sonar-project.properties /sonar-project.properties
+COPY sonar-scanner-init.sh /sonar-scanner-init.sh
+RUN apk -U --no-cache add git && \
+    chmod +x /sonar-scanner-init.sh
 
 CMD ["/bin/sh"]
