@@ -1,11 +1,11 @@
 cat << EOF > ./sonar-project.properties
-sonar.projectKey=jenkins:${CICD_GIT_REPO_NAME}:${JOB_NAME}
-sonar.projectName=jenkins:${CICD_GIT_REPO_NAME}:${JOB_NAME}
-sonar.projectVersion=${VERSION}
-sonar.sourceEncoding=UTF-8
-sonar.login=${SONAR_TOKEN}
-sonar.language=${LANGUAGE}
-sonar.sources=.
-sonar.projectBaseDir=.
-sonar.host.url=${SONAR_HOST}
+sonar.host.url=${SONAR_HOST_URL}
+sonar.login=${SONAR_LOGIN}
+sonar.sourceEncoding=${SONAR_SOURCE_ENCODING}
+sonar.projectKey=${SONAR_PROJECT_KEY}
+sonar.projectName=${SONAR_PROJECT_NAME}
+sonar.projectVersion=${SONAR_PROJECT_VERSION}
+sonar.language=${SONAR_LANGUAGE}
+sonar.sources=${SONAR_SOURCES}
+sonar.projectBaseDir=${SONAR_PROJECT_BASE_DIR}
 EOF
